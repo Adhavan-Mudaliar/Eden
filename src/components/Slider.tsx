@@ -2,6 +2,7 @@ import { useState } from "react";
 import { ArrowLeftOutlined, ArrowRightOutlined } from "@mui/icons-material";
 import { styled } from "styled-components";
 import { sliderItems } from "../data";
+import { mobile } from "../Responsive";
 
 interface Props {
   direction?: "left" | "right";
@@ -18,6 +19,7 @@ const Container = styled.div`
   display: flex;
   position: relative;
   overflow: hidden;
+  ${mobile({ display: "none" })}
 `;
 
 const Arrow = styled.div<Props>`

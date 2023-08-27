@@ -3,6 +3,7 @@ import Footer from "../components/Footer";
 import NavBar from "../components/Navbar";
 import Announcements from "../components/Announcements";
 import { Add, Remove } from "@mui/icons-material";
+import { mobile } from "../Responsive";
 
 interface Props {
   type?: string;
@@ -12,6 +13,7 @@ const Container = styled.div``;
 
 const Wrapper = styled.div`
   padding: 24px;
+  ${mobile({ padding: "8px" })}
 `;
 
 const Title = styled.h1`
@@ -38,7 +40,9 @@ const TopButton = styled.button<Props>`
   color: ${(props) => props.type === "filled" && "white"};
 `;
 
-const TopTexts = styled.div``;
+const TopTexts = styled.div`
+  ${mobile({ display: "none" })}
+`;
 
 const TopText = styled.span`
   text-decoration: underline;
@@ -50,6 +54,7 @@ const TopText = styled.span`
 
 const Bottom = styled.h1`
   display: flex;
+  ${mobile({ flexDirection: "column" })}
 `;
 
 const Info = styled.div`
@@ -59,6 +64,7 @@ const Info = styled.div`
 const Product = styled.div`
   display: flex;
   justify-content: space-between;
+  ${mobile({ flexDirection: "column" })}
 `;
 
 const ProductDetail = styled.div`
@@ -116,11 +122,13 @@ const ProductAmountContainer = styled.div`
 const ProductAmount = styled.div`
   font-size: 20px;
   margin: 4px;
+  ${mobile({ margin: "8px 16px" })}
 `;
 
 const ProductPrice = styled.div`
   font-size: 28px;
   font-weight: 200;
+  ${mobile({ marginBottom: "16px" })}
 `;
 
 const Hr = styled.hr`

@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import { mobile } from "../Responsive";
 
 interface Category {
   id?: number;
@@ -32,6 +33,7 @@ const Image = styled.img<Category>`
   height: auto;
   object-fit: cover;
   transform: translateY(${(props) => props.tY}%);
+  ${mobile({ height: "30vh", transform: "none" })}
 `;
 
 const Info = styled.div`

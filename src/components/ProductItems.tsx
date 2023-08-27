@@ -4,6 +4,7 @@ import {
   ShoppingCartOutlined,
 } from "@mui/icons-material";
 import { styled } from "styled-components";
+import { mobile } from "../Responsive";
 
 interface Product {
   id?: number;
